@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,12 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<section class="promo">
+	<section id="up" class="promo">
 		<div class="container">
 			<header class="header">
 				<a href="#" class="header__logo">
@@ -66,13 +67,13 @@
 						так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
 				</div>
 				<div class="benefits__item">
-					<img src="icons/heart (1).png" alt="heart" class="benefits__icon">
+					<img src="icons/heart(1).png" alt="heart" class="benefits__icon benefits__icon_animated">
 					<div class="benefits__subtitle">Заботимся о здоровье</div>
 					<div class="benefits__desrc">Мы работаем для того, 
 						чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
 				</div>
 				<div class="benefits__item">
-					<img src="icons/shoe (1).png" alt="shoe" class="benefits__icon">
+					<img src="icons/shoe(1).png" alt="shoe" class="benefits__icon">
 					<div class="benefits__subtitle">Учим бегать</div>
 					<div class="benefits__desrc">Помогаем с обучением 
 						правильной технике бега! 
@@ -82,7 +83,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="consultation">
+	<section class="consultation animate__animated animate__fadeInUp wow">
 		<div class="container">
 			<h2 class="title_left">
 				Получите бесплатную консультацию<br>
@@ -100,7 +101,7 @@
 			</form>
 		</div>
 	</section>
-	<section class="carousel">
+	<div class="carousel animate__animated animate__fadeInUp wow">
 		<div class="container">
 			<div class="carousel__inner">
 				<div>
@@ -114,8 +115,8 @@
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class="catalog">
+	</div>
+	<section class="catalog animate__animated animate__fadeInUp wow">
 		<div class="container">
 			<h2 class="title">Каталог пульсометров</h2>
 			<ul class="catalog__tabs">
@@ -394,8 +395,8 @@
 	<section class="feedback">
 		<div class="container">
 			<h2 class="title">отзывы клиентов</h2>
-			<div class="feedback-items">
-				<div class="feedback-items__content">
+			<div class="feedback-items ">
+				<div class="feedback-items__content animate__animated animate__fadeInUp wow">
 					<img src="img/irina.png" alt="irina">
 					<div class="feedback-items__info">
 						<div class="feedback-items__name">Ирина Иванченко</div>
@@ -409,7 +410,7 @@
 					</div>
 				</div>
 				<hr>
-				<div class="feedback-items__content">
+				<div class="feedback-items__content animate__animated animate__fadeInUp wow">
 					<img src="img/ivan.png" alt="irina">
 					<div class="feedback-items__info">
 						<div class="feedback-items__name">Иван Сёмочкин</div>
@@ -422,7 +423,7 @@
 					</div>
 				</div>
 				<hr>
-				<div class="feedback-items__content">
+				<div class="feedback-items__content animate__animated animate__fadeInUp wow">
 					<img src="img/julia.png" alt="irina">
 					<div class="feedback-items__info">
 						<div class="feedback-items__name">Юлия Дашкина</div>
@@ -438,7 +439,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer animate__animated animate__fadeInUp wow">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.217889715997!2d37.64616183213986!3d55.76830295337404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1693590954636!5m2!1sru!2sru" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<div class="footer__info">
 			<address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
@@ -487,11 +488,15 @@
 			<div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<a href="#up" class="pageup">
+		<img src="icons/circle-chevron-up-solid.svg" alt="up">
+	</a>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

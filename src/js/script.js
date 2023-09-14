@@ -73,5 +73,50 @@ $(document).ready(function(){
 	valideForms('#consultation form');
 	valideForms('#order form');
 
-	$('input[name=phone]').mask("+7 (999) 999-9999")
+	$('input[name=phone]').mask("+7 (999) 999-9999");
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+
+		if(!$(this).valid()) {
+			return;
+		};
+
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('slow');
+			$('form').trigger('reset');
+		});
+		return false;
+	});
+
+	//smooth scroll and page up
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+
+	$(document).ready(function(){
+		$("a").on('click', function(event) {
+		  if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+			  scrollTop: $(hash).offset().top
+			}, 800, function(){
+			  window.location.hash = hash;
+			});
+		  } 
+		});
+	  });
+	  
+	  new WOW().init();
 });
